@@ -71,11 +71,16 @@ def decrypt(message):
     return(new_message)
 
 
+
+# Die Nachricht wird vom Benutzer eingegeben
 message = input("write a message")
 
+# direction muss definiert werden, damit die while-Schlaufe nachher funktioniert
 direction = ""
 
+# Es wird nach einem gültigen Input des Benutzers gefragt. Solange der Input nicht e oder d ist, wird nochmals nachgefragt
 while direction != "e" and direction != "d":
+    # die Nachricht wird mit .lower() gleich in Kleinbuchstaben übersetzt
     direction = input('write "e" for encryption\n or "d" for decryption').lower()
 
 if direction == "e":
@@ -84,9 +89,6 @@ if direction == "e":
 elif direction == "d":
     print(decrypt(message))
 
+# falls ein unerwarteter Fehler auftritt
 else:
     print("Sorry I'm confused")
-
-
-
-# print(chr(ord("f")))
