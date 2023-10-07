@@ -4,10 +4,6 @@ pc_score = 0
 user_score = 0
 
 
-
-
-
-
 # Values for rand_num:
 # 0 -> rock
 # 1 -> paper
