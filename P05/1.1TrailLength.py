@@ -1,6 +1,7 @@
 import math
 
-trail = [(1,1), (2,1), (1,2), (1,1)]
+# Ein Trail im Viereck der Grösse 1 -> Distanz sollte insgesamt 4 sein
+trail = [(1,1), (2,1), (2,2), (1,2), (1,1)]
 
 def path_length(trail):
     segments = []
