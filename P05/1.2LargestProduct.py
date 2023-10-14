@@ -36,25 +36,52 @@ for line in grid:
 
 direction = None
 
-
-def vertical_product(row, column):
+# Rechne das Produkt der 4 Zahlen auf einer Zeile aus
+def check_product(row, column):
+    highest = 0
+    direction = None
+    
     line = grid[row]
-    product = line[column]*line[column+1]*line[column+2]*line[column+3]
+    # Kontrolliere ob die Zahl mindestens 3 Abstand vom rechten Rand hat
+    if column < len(line)-3:
+        # Rechne das horizontale produkt aus
+        product = line[column]*line[column+1]*line[column+2]*line[column+3]
+        if product > highest:
+            highest = product
+            direction = "horizontal"
 
-    return(product)
+    if row < len(grid)-3:
+        # Rechne das vertikale Produkt aus
+        product = grid[row][column]*grid[row+1][column]*grid[row+2][column]*grid[row+3][column]
+        if product > highest:
+            highest = product
+            direction = "vertical"
 
-print(vertical_product(1,0))
+    if column < len(line)-3 and row < len(grid)-3:
+        # Rechne das diagonale Produkt aus
+        product = grid[row][column]*grid[row+1][column+1]*grid[row+2][column+2]*grid[row+3][column+3]
+        if product > highest:
+            highest = product
+            direction = "diagonal"
+
+    result = [highest, row, column, direction, grid[row][column]]
+
+    return(result)
+
+    
 
 max_prod = 0
 
 for row_index in range(0, len(grid)):
     row = grid[row_index]
-    for col_index in range(0, len(row)-3):
+    for col_index in range(0, len(row)):
         num = row[col_index]
-        if vertical_product(row_index, col_index) > max_prod:
-            max_prod = vertical_product(row_index, col_index)
+        if check_product(row_index, col_index)[0] > max_prod:
+            max_prod = check_product(row_index, col_index)[0]
             max_coord = (row_index, col_index)
-            print(max_prod, max_coord, num) 
+            #print(check_product(row_index, col_index))
+
+print("largest product is: " + str(max_prod))
 
        
 
