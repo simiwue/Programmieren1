@@ -34,10 +34,12 @@ for line in grid:
     j += 1
 
 
+direction = None
 
-def vertical_product(l_index, c_index):
-    line = grid[l_index]
-    product = line[c_index]*line[c_index+1]*line[c_index+2]*line[c_index+3]
+
+def vertical_product(row, column):
+    line = grid[row]
+    product = line[column]*line[column+1]*line[column+2]*line[column+3]
 
     return(product)
 
@@ -45,8 +47,15 @@ print(vertical_product(1,0))
 
 max_prod = 0
 
-for index, line in enumerate(grid):
-    for i, num in enumerate(line):
-        
+for row_index in range(0, len(grid)):
+    row = grid[row_index]
+    for col_index in range(0, len(row)-3):
+        num = row[col_index]
+        if vertical_product(row_index, col_index) > max_prod:
+            max_prod = vertical_product(row_index, col_index)
+            max_coord = (row_index, col_index)
+            print(max_prod, max_coord, num) 
+
+       
 
 
