@@ -19,7 +19,7 @@ grid = ["08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08",
 "20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54",
 "01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"]
 
-# polish grid in grid = [[line01], [line02], [line03],...]
+# Wandle die List aus strings in eine Liste aus ind() um. Speichere sie neu als grid = [[line01], [line02], [line03],...]
 j = 0
 for line in grid:
     line = line.split(" ")
@@ -33,7 +33,7 @@ for line in grid:
     grid[j] = line
     j += 1
 
-
+# default direction ist None
 direction = None
 
 # Rechne das Produkt der 4 Zahlen auf einer Zeile aus
@@ -66,22 +66,22 @@ def check_product(row, column):
 
     result = [highest, row, column, direction, grid[row][column]]
 
+    # Gib die Liste "result" mit allen Infos zum höchsten Produkt wieder zurück.
     return(result)
 
     
 
-max_prod = 0
-
+winner = [0]
+# Gehe alle Zahlen der Reihe nach durch und führe die Funktion check_product aus.
 for row_index in range(0, len(grid)):
     row = grid[row_index]
     for col_index in range(0, len(row)):
         num = row[col_index]
-        if check_product(row_index, col_index)[0] > max_prod:
-            max_prod = check_product(row_index, col_index)[0]
-            max_coord = (row_index, col_index)
-            #print(check_product(row_index, col_index))
+        if check_product(row_index, col_index)[0] > winner[0]:
+            # Speichere alle Infos zum grössten Produkt als "winner"
+            winner = check_product(row_index, col_index)
 
-print("largest product is: " + str(max_prod))
+print("largest product is: " + str(winner[0]) + "\nstarting at number " + str(winner[4]) + " at row " + str(winner[1]) + " and column " + str(winner[2]) + "in " + str(winner[3]) + " direction." )
 
        
 
