@@ -81,7 +81,7 @@ for row_index in range(0, len(grid)):
             # Speichere alle Infos zum grössten Produkt als "winner"
             winner = check_product(row_index, col_index)
 
-print("largest product is: " + str(winner[0]) + "\nstarting at number " + str(winner[4]) + " at row " + str(winner[1]) + " and column " + str(winner[2]) + "in " + str(winner[3]) + " direction." )
+print("largest product is: " + str(winner[0]) + "\nstarting at number " + str(winner[4]) + " at row " + str(winner[1] + 1) + " and column " + str(winner[2] + 1) + " in " + str(winner[3]) + " direction." )
 
        
 

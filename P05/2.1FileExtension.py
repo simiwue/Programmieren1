@@ -1,13 +1,11 @@
 import os
 
 # Gib hier den Pfad zu deinen Dateien an.
-path = "<Dateipfad...>"
+path = r"<Dateipfad...>"
 
-# Ersetze \ mit /
-try:
-    path.replace('\\', "/")
-except ValueError():
-    pass
+# Ersetze alle \ mit /. Ansonsten gibt es in SyntaxError, weil \ als Escape in Strings benutzt wird.
+path.replace("\\", "/")
+
 
 
 # Mache eine Liste mit allen Dateien in deisem Ordner
