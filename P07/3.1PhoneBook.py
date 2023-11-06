@@ -2,7 +2,6 @@ import json
 
 
 def print_numbers(numbers):
-
     for number in numbers.values():
         print(number)
 
