@@ -1,0 +1,10 @@
+{
+    "Front_seats": 2.30,
+    "Rear_seats": 3.25,
+    "Std_baggage_compartment": 3.65,
+    "Baggage_tube": 4.32,
+    "Usable_fuel": 2.63,
+	"Empty_distance": 2.47,
+    "Maximum_Weight": 1280,
+    "Empty_Moment": 2180.8
+}
