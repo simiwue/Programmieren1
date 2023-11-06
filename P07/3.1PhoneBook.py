@@ -1,7 +1,8 @@
 import json
 
+
 def print_numbers(numbers):
-    #print all numbers
+
     for number in numbers.values():
         print(number)
 
@@ -15,13 +16,15 @@ def lookup_number(numbers, name):
     print(numbers[name])
 
 def load_numbers(numbers, filename):
+    #open external file and save conent as new_numbers
     json_file = open('P07/' + filename)
     new_numbers = json.load(json_file)
+    #add new_numbers to the existing numbers dictionary
     numbers.update(new_numbers)
-    print(numbers)
 
 def save_numbers(numbers, filename):
     json_object = json.dumps(numbers)
+    # open file in write-mode 'w' to make it possible to write data to the file
     with open('P07/' + filename, 'w') as outfile:
         outfile.write(json_object)
 
