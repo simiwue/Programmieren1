@@ -1,4 +1,4 @@
-card_number = "9384 3495 3297 1123"
+card_number = "9384 34a5 3297 1123"
 
 # print(card_number.isdigit())
 
@@ -6,6 +6,7 @@ def check(card_num):
     
     # Nummer wird beim Leerschlag geschnitten und in 4 Teilen als LISTE gespeichert
     parts = card_num.split(" ")
+    print(parts)
 
     checksum = 0
 
