@@ -83,12 +83,12 @@ while direction != "e" and direction != "d":
     # die Nachricht wird mit .lower() gleich in Kleinbuchstaben übersetzt
     direction = input('write "e" for encryption\n or "d" for decryption').lower()
 
-if direction == "e":
-    print(encrypt(message))
+    if direction == "e":
+        print(encrypt(message))
 
-elif direction == "d":
-    print(decrypt(message))
+    elif direction == "d":
+        print(decrypt(message))
 
-# falls ein unerwarteter Fehler auftritt
-else:
-    print("Sorry I'm confused")
+    # falls ein unerwarteter Fehler auftritt
+    else:
+        print("Sorry I'm confused")
