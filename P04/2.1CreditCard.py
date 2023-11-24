@@ -1,37 +1,20 @@
-card_number = "9384 34a5 3297 1123"
+card_number = "9384 3405 3297 1129"
 
-# print(card_number.isdigit())
 
 def check(card_num):
-    
-    # Nummer wird beim Leerschlag geschnitten und in 4 Teilen als LISTE gespeichert
-    parts = card_num.split(" ")
-    print(parts)
-
+    number = card_num.replace(" ", "")
     checksum = 0
 
-    for part in parts:
-        valid = True
-        #besteht jeder Teil nur aus Zahlen
-        if part.isdigit() == False:
-            valid = False
-
-        # rechnet jede Zahl zur checksum
-        for digit in part:
+    for digit in number:
+        if digit.isdigit() == True:
             checksum += int(digit)
-    
-    # Kontrolliert, ob die checksum mit 10 teilbar ist
-    if checksum%10 != 0:
-        valid = False
+        else:
+            return("Your card is invalid!")
+        
+    if checksum%10 == 0:
+        return("Your card is valid")
+    else:
+        return("Your card is invalid, checksum failed")
 
 
-    return(valid)
-
-
-valid = check(card_number)
-
-if valid:
-    print("Your Card is valid!")
-
-else:
-    print("Your card is invalid!")
+print(check(card_number))
