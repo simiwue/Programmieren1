@@ -9,7 +9,7 @@ term = 1
 
 #building the sum with n=0 -> whatever until the term added to the sum is too small (smaller then 1e-15)
 while term > 1e-15:
-    term = (math.factorial(n) / math.factorial(4*n)**4) * ((1103 + 26390*n) / 396**(4*n))
+    term = (math.factorial(4*n) / math.factorial(n)**4) * ((1103 + 26390*n) / 396**(4*n))
     sum += term
     n += 1 
 
