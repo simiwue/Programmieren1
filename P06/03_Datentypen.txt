@@ -1,0 +1,52 @@
+x = 7
+y = 3
+e = x – y / y – x
+
+e ist ein integer mit wert -1
+-> 4/-4
+
+=============================
+
+a = [1,2,3,4,5]
+e = not len(a) % 2 > 0
+
+len(a) % 2 = 1
+-> e ist Boolean mit Wert False
+
+===============================
+
+d = 2.3456789
+s = 2
+e = int(d * 10**s + 0.5) / 10.0**s
+
+int(2.3456789 * 10^2 + 0.5) = int(234.56789 + 0.5) = int(235.06789) = 235
+
+e = 235/100 = 2.35
+-> float
+
+=================================
+
+Gegeben sind zwei positive ganze Zahlen n und k
+vom Typ int. 
+Schreiben Sie einen Python-Ausdruck, der die 
+grösste Zahl kleiner oder gleich k berechnet, die 
+ganzzahlig durch n teilbar ist. (k >=n)
+(Hinweis: die Modulodivision % ist auch hier ganz 
+nützlich.)
+
+resultat1 = (k // n) * n
+
+resultat2 = k - k % n
+
+
+===================================
+
+
+x = 9
+y = x
+x = x + 2
+
+y = 9
+-> integer
+
+

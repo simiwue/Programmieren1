@@ -1,0 +1,48 @@
+
+
+Variablen in Python sind nur Namen, die an ein Objekt gebunden werden. Ein 
+Objekt kann zu einem Zeitpunkt nur einen Namen haben.
+-> True
+
+Zur Iteration über alle Elemente einer Liste sollte eine while-Schleife verwendet 
+werden.
+-> False
+-> for-Schleife
+
+Das folgende Codestück führt zu einem Fehler („Exception“):
+temperatur = 22.5
+wert = int(temperatur)
+print("" + str(wert) + " (" + str(temperatur) + ")")
+-> False
+-> code läuft normal wert ist abgerundete temperatur
+
+Die folgenden beiden Codestücke sind bezüglich Ihrer Semantik identisch.
+-> True
+
+Die folgenden Zeilen schreiben 54321 auf die Konsole:
+line = ""
+for i in range(5,1):
+ line += str(i)
+print(line)
+-> False
+-> müsste for i in range(5,0,-1) sein
+
+Der folgende Funktionskopf enthält keine Fehler und entspricht den Konventionen
+von Python (PEP8) zur Benennung von Funktionen und Variablen:
+def Berechne_Geschwindigkeit(weg, zeit)
+-> False
+-> müsste def berechne_geschwindigkeit(weg, zeit): sein
+
+Ein Stückchen Python Code lautet wie folgt:
+def verarbeite_zahl(zahl):
+ zahl = zahl + 50
+ # weiterer Code, für die Aufgabe nicht relevant
+zahl = 10
+verarbeite_zahl(zahl)
+print("Zahl=", zahl)
+Das Script erzeugt die Ausgabe „Zahl= 60“ auf der Python Konsole.
+-> False
+-> müsste print("Zahl= ", verarbeitete_zahl(zahl)) sein
+
+Bei einer rekursiven Funktion ruft sich eine Funktion selbst wieder auf.
+-> True
