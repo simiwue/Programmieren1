@@ -2,7 +2,7 @@
 
 Variablen in Python sind nur Namen, die an ein Objekt gebunden werden. Ein 
 Objekt kann zu einem Zeitpunkt nur einen Namen haben.
--> True
+-> False
 
 Zur Iteration über alle Elemente einer Liste sollte eine while-Schleife verwendet 
 werden.
